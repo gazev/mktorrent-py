@@ -52,12 +52,8 @@ def build_pieces_str(file_path: str, piece_size: int):
 
 def read_piece(file_path: str, piece_size: int):
     with open(file_path, 'rb') as fp:
-        while True:
-            data = fp.read(piece_size)
+        while (data := fp.read(piece_size)):
             yield data
-
-            if len(data) != piece_size:
-                break
 
 
 def entry_point():
