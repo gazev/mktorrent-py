@@ -1,0 +1,17 @@
+[build-system]
+requires = ['setuptools>=68.0']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = "mktorrent-vug"
+version = '0.0.1'
+dependencies = [
+  'bencode-vug >= 0.1'
+]
+authors = [
+  { name='Goncalo Azevedo', email='goncalooazevedo@outlook.com' },
+]
+description = 'Create torrent files'
+
+[project.scripts]
+mktorrent-py = 'mktorrent:entry_point'
